@@ -1,0 +1,158 @@
+#background {
+    background-image:  url(../images/ItmVuT6-1920x1080-star-wars-wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;   
+    z-index: 0;    
+}
+
+/*Star Wars title image*/
+.title {
+    content:url(../images/Star_Wars_Title.png);
+    width: 220px;
+    margin: auto;
+    padding: 20px;
+}
+
+/*outer div*/
+.console {
+    width:fit-content;
+    padding:20px;
+    margin: auto;
+    border-color:red;
+    border-width: 1px;
+    border-style: dashed;
+    z-index: 1;
+}
+
+.topRow{
+    width:fit-content;
+    margin: auto;
+    clear: both;
+
+}
+
+.botRow{
+    width:fit-content;
+    margin: auto;
+    clear: both;
+}
+
+/*Good Guy Class*/
+.lukeMe {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-image: url(../images/Luke.jpg);
+    background-size: cover; 
+    margin:10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color:#fecc15;
+    text-align: center;}
+.obiMe {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-image: url(../images/Obi.jpg);
+    background-size: cover;
+    margin:10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color:#fecc15;
+    text-align: center;}
+.vaderMe {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-image: url(../images/Vader.jpg);
+    background-size: cover;
+    margin: 10px; 
+    border-style: solid;
+    border-width: 5px;
+    border-color:#fecc15;
+    text-align: center;}
+.empMe {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-image: url(../images/Emperor.jpg);
+    background-size: cover;
+    margin: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color:#fecc15;
+    text-align:center;}
+
+/*Bad Guy Class*/
+.lukeBad {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-image: url(../images/Luke.jpg);
+    background-size: cover; 
+    margin:10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color:#fecc15;
+    text-align: center;}
+.obiBad {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-image: url(../images/Obi.jpg);
+    background-size: cover;
+    margin:10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color:#fecc15;
+    text-align: center;}
+.vaderBad {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-image: url(../images/Vader.jpg);
+    background-size: cover;
+    margin: 10px; 
+    border-style: solid;
+    border-width: 5px;
+    border-color:#fecc15;
+    text-align: center;}
+.empBad {
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    background-image: url(../images/Emperor.jpg);
+    background-size: cover;
+    margin: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color:#fecc15;
+    text-align:center;}
+
+#player {
+    color:white;
+    text-align: center;
+}
+#playerBad {
+    color:white;
+    text-align: center;
+}
+.hit_points{
+    color: white;
+    text-align: center;
+}
+#attack {
+    cursor: crosshair;
+    background-color: red;
+    color:white;
+    border:none;
+    display: block;
+    margin: auto;
+    border-radius: 4px;
+ 
+    padding: 15px 32px;
+    clear: both;
+}
+
+

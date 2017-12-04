@@ -1,143 +1,138 @@
 //Good Guy Objects
 var lukeMe =  {
     title: "Luke Skywalker",
-    hp: 2000,
-    ap: 50}
+    hp: 100,
+    ap: 10
+    }
 var obiMe = {
     title: "Obi-Wan",
-    hp: 3000,
-    ap: 50}
+    hp: 100,
+    ap: 20}
 var vaderMe = {
     title: "Darth Vader",
-    hp: 4000,
-    ap: 50}
+    hp: 100,
+    ap: 30}
 var empMe = {
     title: "Emperor Palpatine",
-    hp: 5000,
-    ap: 50}
+    hp: 100,
+    ap: 40}
 
 //Bad Guy Objects
 var lukeBad =  {
     title: "Luke Skywalker",
-    hp: 2000,
-    ap: 50}
+    hp: 100,
+    ap: 10}
 var obiBad= {
     title: "Obi-Wan",
-    hp: 3000,
-    ap: 50}
+    hp: 100,
+    ap: 15}
 var vaderBad = {
     title: "Darth Vader",
-    hp: 4000,
-    ap: 50}
+    hp: 100,
+    ap: 30}
+    
 var empBad = {
     title: "Emperor Palpatine",
-    hp: 5000,
-    ap: 50}
+    hp: 100,
+    ap: 40}
 
-    //Good Guy Selection
+var selectedBadHealth; 
+var selectedGoodHealth; 
+//var personBad;
+var selectedBadAP ;
+var selectedGoodAp ;
+        
+    //Good Guy Selection - 1.Luke / 2.Obi / 3.Vader / 4.Emp
 function whoAmI(personMe){
+    
     if (personMe === "lukeMe"){
-        $('.hitPoints').text(lukeMe.hp);
+        selectedGoodHealth = lukeMe.hp;
+        selectedGoodAP = lukeMe.ap;
+        $('.healthPointsGood').text(selectedGoodHealth);
         $('.chosenMe').text(lukeMe.title);
-        //fadeToggle
-        $('p.obiMe').fadeToggle("slow");
-        $('p.vaderMe').fadeToggle("slow");
-        $('p.empMe').fadeToggle("slow");
-        $('p.lukeBad').fadeToggle("slow"); 
-          }  
+
+        $('p.obiMe, p.vaderMe, p.empMe, p.lukeBad').hide();
+        $('p.obiBad , p.empBad , p.vaderBad').show();
+    }
+    
     else if (personMe === "obiMe"){
-        $('.hitPoints').text(obiMe.hp);
-        //console.log("I am " + person);
+        selectedGoodHealth = obiMe.hp;
+        selectedGoodAP = obiMe.ap;
+        $('.healthPointsGood').text(selectedGoodHealth);
         $('.chosenMe').text(obiMe.title);
-        //fadeToggle
-        $('p.lukeMe').fadeToggle("slow");
-        $('p.vaderMe').fadeToggle("slow");
-        $('p.empMe').fadeToggle("slow");
-        $('p.obiBad').fadeToggle("slow");   
-    }   
+        
+        $('p.lukeMe, p.vaderMe, p.empMe, p.obiBad').hide();
+        $('p.lukeBad , p.empBad , p.vaderBad').show();
+    }
+
     else if (personMe === "vaderMe"){
-        $('.hitPoints').text(vaderMe.hp);
+        selectedGoodHealth = vaderMe.hp;        
+        selectedGoodAP = vaderMe.ap;        
+        $('.healthPointsGood').text(selectedGoodHealth);
         $('.chosenMe').text(vaderMe.title);
-        //console.log("I am " + person);
-        //fadeToggle
-        $('p.obiMe').fadeToggle("slow");
-        $('p.lukeMe').fadeToggle("slow");
-        $('p.empMe').fadeToggle("slow");
-        $('p.vaderBad').fadeToggle("slow");   
+    
+        $('p.obiMe, p.lukeMe , p.empMe , p.vaderBad').hide();
+        $('p.obiBad , p.empBad , p.lukeBad').show(); 
     }
+
     else if (personMe === "empMe"){
-        $('.hitPoints').text(empMe.hp);
+        selectedGoodHealth = empMe.hp; 
+        selectedGoodAP = empMe.ap;
+        $('.healthPointsGood').text(selectedGoodHealth);
         $('.chosenMe').text(empMe.title);
-        //console.log("I am " + person);
-        //fadeToggle
-        $('p.obiMe').fadeToggle("slow");
-        $('p.vaderMe').fadeToggle("slow");
-        $('p.lukeMe').fadeToggle("slow");
-        $('p.empBad').fadeToggle("slow");    
+ 
+        $('p.obiMe , p.vaderMe , p.lukeMe , p.empBad').hide(); $('p.obiBad , p.lukeBad , p.vaderBad').show();
     }
-}
+};
 
-/*function whoBad(person){
-    if(person === "vaderBad"){
-        $('.hitPointsBad').text(vaderBad.hp);
-        $('.chosenBad').text(vaderBad.title);
-    }
-}*/
 
+    //Bad Guy Selection - 1.Luke / 2.Obi / 3.Vader / 4.Emp
 function whoBad(personBad){
+    //console.log(personBad)
     if (personBad === "lukeBad"){
-        $('.hitPointsBad').text(lukeBad.hp);
+        selectedBadHealth = lukeBad.hp;
+        selectedBadAP = lukeBad.ap;
+        $('.healthPointsBad').text(lukeBad.hp);
         $('.chosenBad').text(lukeBad.title);
         //fadeToggle
-        $('p.obiBad').fadeToggle("slow");
-        $('p.vaderBad').fadeToggle("slow");
-        $('p.empBad').fadeToggle("slow");
-          }  
+        $('p.obiBad , p.vaderBad , p.empBad').hide();
+    }  
+
     else if (personBad === "obiBad"){
-        $('.hitPointsBad').text(obiBad.hp);
+        selectedBadHealth = obiBad.hp;
+        selectedBadAP = obiBad.ap;        
+        $('.healthPointsBad').text(obiBad.hp);
         //console.log("I am " + person);
         $('.chosenBad').text(obiBad.title);
         //fadeToggle
-        
-        $('p.vaderBad').fadeToggle("slow");
-        $('p.empBad').fadeToggle("slow");
-        $('p.obiBad').fadeToggle("slow");   
+        $('p.lukeBad , p.vaderBad , p.empBad').hide();
+
     }   
     else if (personBad === "vaderBad"){
-        $('.hitPointsBad').text(vaderBad.hp);
+        selectedBadHealth = vaderBad.hp;
+        $('.healthPointsBad').text(vaderBad.hp);
         $('.chosenBad').text(vaderBad.title);
-        //console.log("I am " + person);
-        //fadeToggle
-        $('p.obiBad').fadeToggle("slow");
-        $('p.lukeBad').fadeToggle("slow");
-        $('p.empBad').fadeToggle("slow");
-        $('p.vaderBad').fadeToggle("slow");   
+        $('p.obiBad , p.empBad, p.lukeBad').hide();
     }
+
     else if (personBad === "empBad"){
-        $('.hitPointsBad').text(empBad.hp);
+        selectedBadHealth = empBad.hp;
+        selectedBadAP = empBad.ap;        
+        $('.healthPointsBad').text(empBad.hp);
         $('.chosenBad').text(empBad.title);
-        //console.log("I am " + person);
-        //fadeToggle
-        $('p.obiBad').fadeToggle("slow");
-        $('p.vaderBad').fadeToggle("slow");
-        $('p.lukeBad').fadeToggle("slow");
-        $('p.empBad').fadeToggle("slow");
+        $('p.obiBad, p.vaderBad , p.lukeBad').hide();
     }
 }
 
-function calculateAttack (num){
-    console.log(num);
-  //  if (luke.hp > )
-}
 
-//pass good player info
+    // Define Good Guy
 $('.topRow p').on('click', function(){
     var playerMe = $(this).attr('data-player');
     $('.chosenMe').text(playerMe);
     whoAmI(playerMe);
 });
 
-//pass bad player info 
+    //  Define Bad Guy  
 $('.botRow p').on('click', function(){
     var playerBad = $(this).attr('data-player');
     $('.chosenBad').text(playerBad);
@@ -145,10 +140,28 @@ $('.botRow p').on('click', function(){
 });
 
 
+$('button').on('click', function (){
+    if(selectedBadHealth>0 && selectedGoodHealth>0){
+        selectedGoodHealth -= selectedBadAP;
+        selectedBadHealth -= selectedGoodAP;
+        selectedGoodAP += 6;    
+        $('.healthPointsGood').text(selectedGoodHealth);
+        $('.healthPointsBad').text(selectedBadHealth);
+       // if (selectedBadHealth<0){alert('win')}
+       // else(selectedGoodHealth<0){alert('lose')}
+    }
 
-//$('button').on('click', function(){
-    //var randomHP = Math.floor((Math.random() * 100) +1);
-   // console.log(randomHP);
 
-   // function calculateAttack(randomHP);
-//});
+  //You Win Round #1
+    else if (selectedBadHealth<0){
+        
+        console.log(personBad);
+        //$(personBad).hide();
+        //$('p.empBad , p.vaderBad').show();
+    }
+
+    //You Lose
+    else if (selectedGoodHealth<0){
+        alert("THE FORCE IS NOT WITH YOU....")
+    }
+});
